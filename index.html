@@ -1,0 +1,271 @@
+<html>
+
+
+
+<head>
+    
+    
+    <title> Gra: Serce w Klikach </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    
+    <style>
+        
+        
+        
+        .prevent-select {
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+        
+        body {
+            width: 100%;
+            background: #833AB4;
+            background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 58%, rgba(252, 176, 69, 1) 100%);
+        }
+        
+        html, body {margin: 0; height: 100%; overflow: hidden}
+        
+        
+        
+        
+        .t {
+            visibility: hidden;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        div {
+            font-family: 'SourceSerifProRegular';
+            font-weight: bolder;
+            font-style: normal;
+            color: darkmagenta;
+        }
+        
+        #progress-bar {
+            font-family: 'SourceSerifProRegular';
+            font-weight: bolder;
+            font-style: normal;
+            
+            
+            color: darkmagenta;
+        }
+        
+        .tyt {
+            font-family: 'Kaushan Script', cursive;
+            font-weight: normal;
+            font-style: normal;
+            color: pink;
+        }
+        
+        
+        
+        .heart {
+            position: absolute; 
+            left: 0; 
+            right: 0; 
+            margin-inline: auto; 
+            width: auto;
+            
+        }
+        
+        .heart:before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            font-family: 'icons';
+            font-size: 21px;
+            text-indent: 0;
+            font-variant: normal;
+            line-height: 21px;
+        }
+        .heart {
+            -webkit-animation: animateHeart 2.5s infinite;
+            animation: animateHeart 2.5s infinite;
+        }
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 50%;
+            width: 120px;
+            height: 200px;
+            background: red;
+            border-radius: 100px 100px 0 0;
+            -webkit-transform: rotate(-45deg) translateZ(0);
+            transform: rotate(-45deg) translateZ(0);
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+        }
+        .heart:after {
+            left: 26%;
+            -webkit-transform: rotate(45deg) translateZ(0);
+            transform: rotate(45deg) translateZ(0);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+        @-webkit-keyframes animateHeart {
+            0% {
+                -webkit-transform: scale(0.8);
+            }
+            5% {
+                -webkit-transform: scale(0.9);
+            }
+            10% {
+                -webkit-transform: scale(0.8);
+            }
+            15% {
+                -webkit-transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(0.8);
+            }
+            100% {
+                -webkit-transform: scale(0.8);
+            }
+        }
+        @keyframes animateHeart {
+            0% {
+                transform: scale(0.8);
+            }
+            5% {
+                transform: scale(0.9);
+            }
+            10% {
+                transform: scale(0.8);
+            }
+            15% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.8);
+            }
+            100% {
+                transform: scale(0.8);
+            }
+        }
+        
+        
+        
+        .bar {
+            position: fixed;
+            background-color: red;
+            /* height: 100px; */
+            bottom: 0;
+            width: 100%;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+    
+    <div class="row d-flex justify-content-center mt-4 tyt whide">
+        <h1 class="prevent-select">Serce w Klikach</h1>
+    </div>
+    
+    
+    <div class="w3-light-grey bar prevent-select whide">
+        <div id="progress-bar" class="w3-container w3-red w3-center" style="width:45%">Licznik miłości: 0/551</div>
+    </div>
+    
+    <div class="row d-flex justify-content-center mt-4">
+        
+        <!-- <div class="col-md-2 align-self-center"> </div> -->
+        
+        <div class="col-md-5 align-self-center">
+            
+        </div>
+        
+        
+        <svg  id="heart" class="heart align-middle  mt-5 " onclick="increment()" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="red" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+            
+            <text  class="t prevent-select" x="8" y="5" text-anchor="middle" fill="pink" font-size="2.5" font-family="Tangerine">Kocham Cię</text>
+            <text class="t prevent-select" x="8" y="8" text-anchor="middle" fill="pink" font-size="2.5" font-family="Tangerine">Aniu</text>
+            
+            <text id="help" class="prevent-select" x="8" y="5" text-anchor="middle" fill="white" font-size="2.5" font-family="Tahoma">Kliknij mnie</text>
+            <text id="help2" class="prevent-select" x="8" y="8" text-anchor="middle" fill="white" font-size="2.5" font-family="Tahoma">proszee</text>
+            
+        </svg>
+        
+    </div>  
+    
+    
+    
+    
+    <script>
+        
+        console.log("DEBUG: Kocham Cię BARDZO... ")
+        
+     
+        
+        let count = 0;
+        
+        function increment() {
+            console.log("DEBUG: BARDZO...")
+
+            hideHelp();
+            
+
+            const svgElement = document.getElementById("heart");
+            
+            if (count >= 550) {   
+                console.log("DEBUG: MOCNO!")
+                let elements = document.getElementsByClassName("whide");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.visibility = "hidden"; // or "inline", depending on your layout
+                }
+                elements = document.getElementsByClassName("t");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.visibility = "visible"; // or "inline", depending on your layout
+                }
+                return;
+            }
+            
+            count += 1;
+            
+            var progressBar = document.getElementById("progress-bar");
+            currentWidth = (count / 10) + 44; 
+            
+            if (currentWidth < 100) {
+                currentWidth += 1;
+                progressBar.style.width = currentWidth + "%";
+                progressBar.innerText = "Licznik miłości: " + count + "/551";
+                
+            }
+            
+            if (count % 2) {
+                svgElement.setAttribute("height", parseInt(svgElement.getAttribute("height")) + 1);
+                svgElement.setAttribute("width", parseInt(svgElement.getAttribute("width")) + 1);
+            }
+            
+            
+        }
+
+        function hideHelp() {
+
+            const help = document.getElementById("help");
+            help.style.visibility = "hidden"
+            const help2 = document.getElementById("help2");
+            help2.style.visibility = "hidden"
+        }
+        
+    </script>
+    
+</body>
+
+
+
+</html>
