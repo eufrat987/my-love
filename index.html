@@ -34,7 +34,11 @@
         
         html, body {margin: 0; height: 100%; overflow: hidden}
         
-        
+        #my-title-id {
+            font-family: 'Kaushan Script';
+            font-weight: normal;
+            font-style: normal;
+        }
         
         
         .t {
@@ -42,16 +46,11 @@
             font-family: 'Dancing Script', cursive;
         }
         
-        div {
-            font-family: 'SourceSerifProRegular';
-            font-weight: bolder;
-            font-style: normal;
-            color: darkmagenta;
-        }
+
         
         #progress-bar {
-            font-family: 'SourceSerifProRegular';
-            font-weight: bolder;
+            font-family: 'Kaushan Script';
+            font-weight: normal;
             font-style: normal;
             
             
@@ -69,11 +68,8 @@
         
         .heart {
             position: absolute; 
-            left: 0; 
-            right: 0; 
             margin-inline: auto; 
             width: auto;
-            
         }
         
         .heart:before {
@@ -171,8 +167,8 @@
 
 <body>
     
-    <div class="row d-flex justify-content-center mt-4 tyt whide">
-        <h1 class="prevent-select">Serce w Klikach</h1>
+    <div  class="row d-flex justify-content-center mt-4 tyt whide">
+        <h1 id="my-title-id" class="prevent-select">Serce w Klikach</h1>
     </div>
     
     
