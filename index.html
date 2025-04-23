@@ -74,8 +74,6 @@
         
         .helper {
             visibility: hidden;
-            transition: visibility 2s;
-            transition-delay: 2s;
         }
         
         
@@ -287,12 +285,10 @@
             var tit = document.getElementById("my-title-id");
             tit.style.visibility = "visible";
 
-            showHelp();
+            setTimeout(() => {
+                showHelp();
+            }, 2000);
             
-            //     for (let i=0;i<559;i++) {
-            //     sleep(1);
-            //     increment();
-            // }
         }
         
     </script>
