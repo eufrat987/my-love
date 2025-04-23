@@ -236,7 +236,7 @@
             
             var progressBar = document.getElementById("progress-bar");
             
-            let width = window.screen.width;    
+            let width = window.innerWidth;   
             let startWidth = -40/1500 * width + 60 + 320 * 40 / 1500;
             
             currentWidth = (count / 10) + startWidth; 
@@ -272,7 +272,7 @@
         
         window.onload = () => {
             
-            let width = window.screen.width;
+            let width = window.innerWidth;
             let startWidth = -40/1500 * width + 60 + 320 * 40 / 1500;
             
             var progressBar = document.getElementById("progress-bar");
